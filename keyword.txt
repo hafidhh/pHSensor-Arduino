@@ -1,0 +1,18 @@
+###########################################
+# Syntax Coloring Map For pHMeter-Arduino
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+#pHMeter_Arduino KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+begin	KEYWORD2
+ReadpH	KEYWORD2
+ReadTemp KEYWORD2
+ReadVoltage KEYWORD2
