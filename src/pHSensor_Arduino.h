@@ -1,5 +1,19 @@
-#ifndef pHMeter_Arduino_h
-#define pHMeter_Arduino_h
+/**
+ * @file pHSensor_Arduino.h
+ * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
+ * @brief 
+ * @version 1.0.0
+ * @date 2022-12-04
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ * Github :
+ * https://github.com/hafidhh
+ * https://github.com/hafidhh/pHSensor-Arduino
+ */
+
+#ifndef pHSensor_Arduino_h
+#define pHSensor_Arduino_h
 
 #include "Arduino.h"
 
@@ -15,14 +29,14 @@ static const float LOGIC3V3(3.3);
  * @brief Class that stores state and functions for pH Meter
  * 
  */
-class pHMeter_Arduino
+class pHSensor_Arduino
 {
 private:
   uint8_t _type;
   uint8_t _pin;
   uint16_t _adc;
-  float _logic;
   int _adcValue;
+  float _logic;
   float _Voltage;
   float _Temp;
   float _pH;
@@ -33,7 +47,7 @@ public:
    * @param Sensor_Type type of sensor : PH4502C
    * @param pin pin number that sensor is connected
    */
-  pHMeter_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t adc = ADC10BIT, float logic = LOGIC5V);
+  pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t adc = ADC10BIT, float logic = LOGIC5V);
   /**
    * @brief begin
    * 

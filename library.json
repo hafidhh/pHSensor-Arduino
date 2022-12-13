@@ -1,11 +1,11 @@
 {
-    "name": "pHMeter-Arduino",
+    "name": "pHSensor-Arduino",
     "version": "1.0.0",
     "keywords": "sensor, arduino",
     "description": "Read pH, Read Temperature",
     "repository": {
       "type": "git",
-      "url": "https://github.com/hafidhh/pHMeter-Arduino"
+      "url": "https://github.com/hafidhh/pHSensor-Arduino"
     },
     "authors": [{
       "name": "hafidhh",
@@ -13,5 +13,5 @@
       "maintainer": true
     }],
     "frameworks": ["arduino"],
-    "platforms": ["atmelavr"]
+    "platforms": ["*"]
   }

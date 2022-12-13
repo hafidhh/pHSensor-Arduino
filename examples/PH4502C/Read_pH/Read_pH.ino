@@ -9,14 +9,15 @@
  * 
  * Github :
  * https://github.com/hafidhh
+ * https://github.com/hafidhh/pHMeter-Arduino
  */
 
 #include <Arduino.h>
-#include <pHMeter_Arduino.h>
+#include <pHSensor_Arduino.h>
 
 // pin = PO pin
 uint8_t pin = A0;
-pHMeter_Arduino pH(PH4502C, pin);
+pHSensor_Arduino pH(PH4502C, pin);
 float pHValue;
 
 void setup() {
@@ -26,7 +27,7 @@ void setup() {
 
 void loop() {
   pHValue = pH.ReadpH();
-  Serial.print("pH = ");
+  Serial.print("\npH = ");
   Serial.println(pHValue);
   delay(1000);
 }

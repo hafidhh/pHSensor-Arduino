@@ -2,21 +2,22 @@
  * @file Read_Voltage.ino
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
  * @brief Example Read Voltage
- * @version 0.0.1
+ * @version 1.0.0
  * @date 2022-12-04
  * 
  * @copyright Copyright (c) 2022
  * 
  * Github :
  * https://github.com/hafidhh
+ * https://github.com/hafidhh/pHSensor-Arduino
  */
 #include <Arduino.h>
-#include <pHMeter_Arduino.h>
+#include <pHSensor_Arduino.h>
 
 // pin = PO pin
 uint8_t pin = A0;
 
-pHMeter_Arduino pH(PH4502C, pin);
+pHSensor_Arduino pH(PH4502C, pin);
 float volt;
 
 void setup() {
