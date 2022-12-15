@@ -19,21 +19,21 @@ pHSensor_Arduino pH(type, pin);
 void begin()
 ```
 
-### Sensor Read
+### Read Voltage
 param **`calibration`** Voltage  
 return **`Voltage`**
 ```cpp
 float readVoltage(float calibration)
 ```
 
-### Count Pulse
+### Read pH
 param **`calibration`** Voltage  
 return **`pH`**
 ```cpp
 float readpH(float calibration)
 ```
 
-### Get Total Pulse
+### Read Temperature
 param **`calibration`**  
 return **`Temperatur`**
 ```cpp
