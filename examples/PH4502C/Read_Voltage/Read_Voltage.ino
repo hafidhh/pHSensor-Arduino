@@ -26,7 +26,7 @@ void setup() {
 }
 
 void loop() {
-  volt = pH.ReadVoltage();
+  volt = pH.readVoltage();
   Serial.print("\nVoltage = ");
   Serial.println(volt);
   delay(1000);

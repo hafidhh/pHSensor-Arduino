@@ -26,7 +26,7 @@ void setup() {
 }
 
 void loop() {
-  pHValue = pH.ReadpH();
+  pHValue = pH.readpH();
   Serial.print("\npH = ");
   Serial.println(pHValue);
   delay(1000);
