@@ -48,32 +48,14 @@ public:
    * @param pin pin number that sensor is connected
    */
   pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t adc = ADC10BIT, float logic = LOGIC5V);
-  /**
-   * @brief begin
-   * 
-   */
+
   void begin();
-  /**
-   * @brief Read Voltage
-   * 
-   * @param calibration 
-   * @return float Voltage
-   */
-  float ReadVoltage(float calibration = 0);
-  /**
-   * @brief Read pH, pH = 0 - 14
-   * 
-   * @param calibration
-   * @return float pH
-   */
-  float ReadpH(float calibration = 0);
-  /**
-   * @brief Read Temperature in C
-   * 
-   * @param calibration
-   * @return float Temp 
-   */
-  float ReadTemp(float calibration = 0);
+
+  float readVoltage(float calibration = 0);
+
+  float readpH(float calibration = 0);
+  
+  float readTemp(float calibration = 0);
 };
 
 #endif

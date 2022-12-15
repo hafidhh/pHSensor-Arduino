@@ -15,6 +15,14 @@
 #include "Arduino.h"
 #include "pHSensor_Arduino.h"
 
+/**
+ * @brief Construct a new pHSensor Arduino::pHSensor Arduino object
+ * 
+ * @param Sensor_Type type of sensor : PH4502C
+ * @param pin pin number that sensor is connected
+ * @param adc 
+ * @param logic 
+ */
 pHSensor_Arduino::pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t adc, float logic)
 {
   _pin = pin;
@@ -23,12 +31,22 @@ pHSensor_Arduino::pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t ad
   _logic = logic;
 }
 
+/**
+ * @brief begin
+ * 
+ */
 void pHSensor_Arduino::begin()
 {
   pinMode(_pin, INPUT);
 }
 
-float pHSensor_Arduino::ReadVoltage(float calibration)
+/**
+ * @brief Read Voltage
+ * 
+ * @param calibration 
+ * @return float Voltage
+ */
+float pHSensor_Arduino::readVoltage(float calibration)
 {
   switch (_type)
   {
@@ -45,7 +63,13 @@ float pHSensor_Arduino::ReadVoltage(float calibration)
   }
 }
 
-float pHSensor_Arduino::ReadpH(float calibration)
+/**
+ * @brief Read pH, pH = 0 - 14
+ * 
+ * @param calibration
+ * @return float pH
+ */
+float pHSensor_Arduino::readpH(float calibration)
 { 
   switch (_type)
   {
@@ -63,7 +87,13 @@ float pHSensor_Arduino::ReadpH(float calibration)
   }
 }
 
-float pHSensor_Arduino::ReadTemp(float calibration)
+/**
+ * @brief Read Temperature in C
+ * 
+ * @param calibration
+ * @return float Temp 
+ */
+float pHSensor_Arduino::readTemp(float calibration)
 {
   switch (_type)
   {
