@@ -12,7 +12,7 @@
 # Methods and Functions (KEYWORD2)
 ###########################################
 
-begin	KEYWORD2
-ReadpH	KEYWORD2
-ReadTemp KEYWORD2
-ReadVoltage KEYWORD2
+begin   KEYWORD2
+readpH  KEYWORD2
+readTemp    KEYWORD2
+readVoltage KEYWORD2
