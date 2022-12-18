@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 ###########################################
 
-#pHSensor_Arduino KEYWORD1
+#pHSensor KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)

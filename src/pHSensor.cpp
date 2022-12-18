@@ -1,5 +1,5 @@
 /**
- * @file pHSensor_Arduino.cpp
+ * @file pHSensor.cpp
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
  * @brief 
  * @version 1.0.0
@@ -13,7 +13,7 @@
  */
 
 #include "Arduino.h"
-#include "pHSensor_Arduino.h"
+#include "pHSensor.h"
 
 /**
  * @brief Construct a new pHSensor Arduino::pHSensor Arduino object
@@ -23,7 +23,7 @@
  * @param adc 
  * @param logic 
  */
-pHSensor_Arduino::pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t adc, float logic)
+pHSensor::pHSensor(uint8_t Sensor_Type, uint8_t pin, uint16_t adc, float logic)
 {
   _pin = pin;
   _type = Sensor_Type;
@@ -35,7 +35,7 @@ pHSensor_Arduino::pHSensor_Arduino(uint8_t Sensor_Type, uint8_t pin, uint16_t ad
  * @brief begin
  * 
  */
-void pHSensor_Arduino::begin()
+void pHSensor::begin()
 {
   pinMode(_pin, INPUT);
 }
@@ -46,7 +46,7 @@ void pHSensor_Arduino::begin()
  * @param calibration 
  * @return float Voltage
  */
-float pHSensor_Arduino::readVoltage(float calibration)
+float pHSensor::readVoltage(float calibration)
 {
   switch (_type)
   {
@@ -69,7 +69,7 @@ float pHSensor_Arduino::readVoltage(float calibration)
  * @param calibration
  * @return float pH
  */
-float pHSensor_Arduino::readpH(float calibration)
+float pHSensor::readpH(float calibration)
 { 
   switch (_type)
   {
@@ -93,7 +93,7 @@ float pHSensor_Arduino::readpH(float calibration)
  * @param calibration
  * @return float Temp 
  */
-float pHSensor_Arduino::readTemp(float calibration)
+float pHSensor::readTemp(float calibration)
 {
   switch (_type)
   {

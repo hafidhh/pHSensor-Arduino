@@ -13,11 +13,11 @@
  */
 
 #include <Arduino.h>
-#include <pHSensor_Arduino.h>
+#include <pHSensor.h>
 
 // pin = PO pin
 uint8_t pin = A0;
-pHSensor_Arduino pH(PH4502C, pin);
+pHSensor pH(PH4502C, pin);
 float pHValue;
 
 void setup() {
